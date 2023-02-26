@@ -37,7 +37,6 @@ class Test(unittest.TestCase):
             if mex < item[1]:
                 mex = item[1]
         mex = mex + 1
-        # print(f'mex:  {mex}')
         return mex
         
     def test_1_get_name(self):
