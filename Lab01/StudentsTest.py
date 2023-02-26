@@ -1,7 +1,5 @@
 import unittest
 from Students import Students
-# import sys
-# sys.path.append('../lab1')
 
 class Test(unittest.TestCase):
     students = Students()
@@ -31,12 +29,13 @@ class Test(unittest.TestCase):
         print(f'{self.user_id[3]} {self.user_name[3]}')
         print('Finish set_name test')
     # test case function to check the Students.get_name function
-    def get_mex(self):
+    def get_mex(self):# pragma: no cover
         mex = -1
         for item in enumerate(self.user_id):
             if mex < item[1]:
                 mex = item[1]
         mex = mex + 1
+        # print(f'mex:  {mex}')
         return mex
         
     def test_1_get_name(self):
@@ -58,8 +57,10 @@ class Test(unittest.TestCase):
         self.assertEqual(self.students.get_name(mex), 'There is no such user')
 
 
-if __name__ == '__main__':# pragma: no cover
-    unittest.main(verbosity = 2)
+if __name__ == '__main__':
+    unittest.main(verbosity = 2) 
+else: # pragma: no cover
+    pass
    
 
 
