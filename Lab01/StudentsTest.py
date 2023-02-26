@@ -29,7 +29,7 @@ class Test(unittest.TestCase):
         print(f'{self.user_id[3]} {self.user_name[3]}')
         print('Finish set_name test')
     # test case function to check the Students.get_name function
-    def get_mex(self):# pragma: no cover
+    def get_mex(self):
         mex = -1
         for item in enumerate(self.user_id):
             if mex < item[1]:
@@ -58,8 +58,8 @@ class Test(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity = 2) 
-else: # pragma: no cover
+    unittest.main(verbosity = 2) # pragma: no cover
+else:# pragma: no cover
     pass
    
 
