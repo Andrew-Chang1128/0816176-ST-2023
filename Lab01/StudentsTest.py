@@ -8,21 +8,34 @@ class Test(unittest.TestCase):
     def setUp(self):
         self.students = Students()
         self.user_name = ['John', 'Mary','Thomas','Jane']
+        
 
     # test case function to check the Students.set_name function
     def test_0_set_name(self):
         #TODO
         print("start set_name test")
-        self.user_id.append(self.students.set_name('John'))
-        self.user_id.append(self.students.set_name('Mary'))
-        self.user_id.append(self.students.set_name('Thomas'))
-        self.user_id.append(self.students.set_name('Jane'))
-        
-        self.assertEqual(0,self.user_id[0])
-        self.assertEqual(1,self.user_id[1])
-        self.assertEqual(2,self.user_id[2])
-        self.assertEqual(3,self.user_id[3])
 
+        result = self.students.set_name('John')
+        for user in enumerate(self.user_id):
+            # print(f'result: {result}, user id in user list:{user[1]}')
+            self.assertNotEqual(user[1],result)
+        self.user_id.append(result)
+        result = self.students.set_name('Mary')
+        for user in enumerate(self.user_id):
+            # print(f'result: {result}, user id in user list:{user[1]}')
+            self.assertNotEqual(user[1],result)
+        self.user_id.append(result)
+        result = self.students.set_name('Thomas')
+        for user in enumerate(self.user_id):
+            # print(f'result: {result}, user id in user list:{user[1]}')
+            self.assertNotEqual(user[1],result)
+        self.user_id.append(result)
+        result = self.students.set_name('Jane')
+        for user in enumerate(self.user_id):
+            # print(f'result: {result}, user id in user list:{user[1]}')
+            self.assertNotEqual(user[1],result)
+        self.user_id.append(result)
+   
         print(f'{self.user_id[0]} {self.user_name[0]}')
         print(f'{self.user_id[1]} {self.user_name[1]}')
         print(f'{self.user_id[2]} {self.user_name[2]}')
@@ -58,7 +71,7 @@ class Test(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity = 2) # pragma: no cover
+    unittest.main() # pragma: no cover
 else:# pragma: no cover
     pass
    
