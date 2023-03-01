@@ -14,12 +14,8 @@ class Test(unittest.TestCase):
     def test_0_set_name(self):
         #TODO
         print("start set_name test")
-
-        result = self.students.set_name('John')
-        for user in enumerate(self.user_id):
-            # print(f'result: {result}, user id in user list:{user[1]}')
-            self.assertNotEqual(user[1],result)
-        self.user_id.append(result)
+   
+        self.user_id.append(self.students.set_name('John'))
         result = self.students.set_name('Mary')
         for user in enumerate(self.user_id):
             # print(f'result: {result}, user id in user list:{user[1]}')
