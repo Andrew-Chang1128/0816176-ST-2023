@@ -17,11 +17,11 @@ class ApplicationTest(unittest.TestCase):
     @patch('app.MailSystem.send')
     @patch('app.Application.get_random_person', side_effect = ["William", "Oliver", "Henry", "Liam"])
     def test_app(self, mockGetRandomPerson, mockSend):
-        # spy
+        # spy on Sendmain function
         def mockSend_side_effect(*args, **kwargs):
             print(args[1])
         mockSend.side_effect = mockSend_side_effect
-        # mock
+        # mock get random person
         nextPerson = self.App.select_next_person()
         self.assertEqual(nextPerson, 'Liam')
         print(f'{nextPerson} selected!')
