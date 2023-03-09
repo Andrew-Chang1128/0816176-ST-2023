@@ -17,15 +17,16 @@ class ApplicationTest(unittest.TestCase):
     @patch('app.MailSystem.send')
     @patch('app.Application.get_random_person', side_effect = ["William", "Oliver", "Henry", "Liam"])
     def test_app(self, mockGetRandomPerson, mockSend):
-        # spy on Sendmain function
+        # Mock Sendmain function by creating a new func and assign it to sign effect of send
         def mockSend_side_effect(*args, **kwargs):
             print(args[1])
         mockSend.side_effect = mockSend_side_effect
-        # mock get random person
+        # mock get_random_person func which will be called by select_next_person
         nextPerson = self.App.select_next_person()
         self.assertEqual(nextPerson, 'Liam')
         print(f'{nextPerson} selected!')
         self.App.notify_selected()
+        # get call count
         self.assertEqual(mockSend.call_count,4)
         pass
 
