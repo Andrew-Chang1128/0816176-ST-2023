@@ -13,9 +13,10 @@ class ApplicationTest(unittest.TestCase):
         print(f'people stubbed {self.App.people}, selected stubbed: {self.App.selected}')
         pass
 
+    @patch('app.MailSystem.write')
     @patch('app.MailSystem.send')
     @patch('app.Application.get_random_person', side_effect = ["William", "Oliver", "Henry", "Liam"])
-    def test_app(self, mockGetRandomPerson, mockSend):
+    def test_app(self, mockGetRandomPerson, mockSend, mockWrite):
         # Mock Send function by creating a new func and assign it to side effect of Mocksend
         def mockSend_side_effect(*args, **kwargs):
             print(args[1])
@@ -26,6 +27,7 @@ class ApplicationTest(unittest.TestCase):
         print(f'{nextPerson} selected!')
         self.App.notify_selected()
         self.assertEqual(mockSend.call_count,4)
+        self.assertEqual(mockWrite.call_count,4)
         pass
 
 
