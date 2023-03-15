@@ -2,7 +2,7 @@ import math
 
 
 class Calculator:
-#
+
     @staticmethod
     def divide(x, y):
         return x / y
