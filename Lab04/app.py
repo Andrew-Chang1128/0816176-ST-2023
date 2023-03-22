@@ -32,7 +32,8 @@ def script():
     #open tab
     driver.switch_to.new_window('tab')
     driver.get("https://www.google.com")
-    ele = driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")
+    ele = driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea")
+    # /html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea
     ele.send_keys('0816176')
     ele.send_keys(Keys.ENTER)
     #print the title of second result
