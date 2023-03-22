@@ -43,6 +43,8 @@ def script():
     print(ele.text)
     # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/a/h3
     # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[1]/div/div/div/div[1]/div/div/div[1]/div/a/h3
+    # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/a/h3
+    # //div[@class='g']//div[@class='r']//a[not(@class)]
     
     # while(1):
     #     pass
