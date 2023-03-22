@@ -32,8 +32,10 @@ def script():
     #open tab
     driver.switch_to.new_window('tab')
     driver.get("https://www.google.com")
-    ele = driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea")
+    ele = driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")
+    # /html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input
     # /html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea
+    # /html/body/ntp-app//div/div[1]/ntp-realbox//div/input
     ele.send_keys('0816176')
     ele.send_keys(Keys.ENTER)
     #print the title of second result
