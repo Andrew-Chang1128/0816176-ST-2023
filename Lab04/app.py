@@ -10,9 +10,9 @@ from selenium.webdriver.common.keys import Keys
 def script():
     
     options = Options()
-    # options.add_argument('--headless')
-    # options.add_argument('--window-size=1920,1080')
-    # options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
+    options.add_argument('--window-size=1920,1080')
+    options.add_argument('--disable-gpu')
 
     driver = webdriver.Chrome(service = Service(ChromeDriverManager().install()),options=options)
     driver.get("https://www.nycu.edu.tw/")
