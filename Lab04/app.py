@@ -10,9 +10,9 @@ from selenium.webdriver.common.keys import Keys
 def script():
     
     options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--window-size=1920,1080')
-    options.add_argument('--disable-gpu')
+    # options.add_argument('--headless')
+    # options.add_argument('--window-size=1920,1080')
+    # options.add_argument('--disable-gpu')
 
     driver = webdriver.Chrome(service = Service(ChromeDriverManager().install()),options=options)
     driver.get("https://www.nycu.edu.tw/")
@@ -39,8 +39,9 @@ def script():
     ele.send_keys('0816176')
     ele.send_keys(Keys.ENTER)
     #print the title of second result
-    ele = driver.find_element(By.XPATH, "/html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/a/h3")
-    print(ele.text)
+    ele = driver.find_element(By.XPATH, "//div[contains(@class,'g')]/div[1]//h3")
+    print(ele[1].text)
+    # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[1]/div/div/div
     # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/a/h3
     # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[1]/div/div/div/div[1]/div/div/div[1]/div/a/h3
     # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/a/h3
