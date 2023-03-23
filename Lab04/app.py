@@ -39,13 +39,20 @@ def script():
     ele.send_keys('0816176')
     ele.send_keys(Keys.ENTER)
     #print the title of second result
-    ele = driver.find_element(By.XPATH, "//div[contains(@class,'g')]/div[1]//h3")
-    print(ele[1].text)
+    # ele = driver.find_element(By.XPATH, "//div[@id='search']//div[@class='g']/div[1]")
+    # print(ele.text)
+    ele = driver.find_element(By.XPATH, "//div[@id='search']//div[@class='g']/div[1]//h3")
+    print(ele.text)
+    # print(f'1 {ele.text[1]}')
+    # print(f'2 {ele.text[2]}')
+    # print(f'3 {ele.text[3]}')
+    # //div[contains(@class,'g')]/div[1]//h3
     # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[1]/div/div/div
     # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/a/h3
     # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[1]/div/div/div/div[1]/div/div/div[1]/div/a/h3
     # /html/body/div[7]/div/div[11]/div/div[2]/div[2]/div/div/div[3]/div/div/div[1]/div/a/h3
     # //div[@class='g']//div[@class='r']//a[not(@class)]
+    # //div[@id='search']//div[@class='g']/div[@class='rc']/div[@class='r']
     
     # while(1):
     #     pass
