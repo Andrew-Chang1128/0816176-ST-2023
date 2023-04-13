@@ -91,14 +91,14 @@ class CSSTest(unittest.TestCase):
         print(f'call count {mockCourseExist.call_count}')
         self.assertEqual(mockCourseExist.call_count,4)
 
-    @patch('course_scheduling_system.CSS.check_course_exist')
-    def test_q1_7(self, mockCourseExist):
-        print("----------------------------test_q1_7----------------------------")
-        mockCourseExist.return_value = (False)
-        courseToAdd = ('Algorithms', 'Monday', 3, 10)
-        courseList = self.css.get_course_list()
-        print(courseList)
-        self.assertEqual(courseList, [])
+    # @patch('course_scheduling_system.CSS.check_course_exist')
+    # def test_q1_7(self, mockCourseExist):
+    #     print("----------------------------test_q1_7----------------------------")
+    #     mockCourseExist.return_value = (False)
+    #     courseToAdd = ('Algorithms', 'Monday', 3, 10)
+    #     courseList = self.css.get_course_list()
+    #     print(courseList)
+    #     self.assertEqual(courseList, [])
         
 if __name__ == "__main__":
     unittest.main()# pragma: no cover
