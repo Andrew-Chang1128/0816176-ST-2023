@@ -5,4 +5,4 @@ Fuzzing
 
 ---
 ASan report
-![ASan](ASan report.png)
+![ASan](ASan.png)
